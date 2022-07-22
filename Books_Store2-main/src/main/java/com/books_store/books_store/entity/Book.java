@@ -50,6 +50,8 @@ public class Book {
     @JsonBackReference
     private Autor autor;
 
+  
+
     //ManyToOne -> varios livros para 1 autor
     //fetch = FetchType.LAZY -> para fazer a consulta livro e autores a consulta tera um join 
     //cascade  -> toda vez que inserir/remover um livro afetará a tabela autor

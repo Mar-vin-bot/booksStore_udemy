@@ -1,0 +1,23 @@
+{
+    "name": "O investidor",
+    "pages": 200,
+    "chapters": 9,
+    "isbn": "456str",
+    "publisherName": "kakak",
+    "autor": {
+        "name": "marvin de souza",
+        "age": 100
+    }
+}
+
+{
+    "name": "O investidor de colunas",
+    "pages": 20,
+    "chapters": 5,
+    "isbn": "456str546",
+    "publisherName": "editoraaaa",
+    "autor": {
+        "name": "marvin",
+        "age": 19
+    }
+}

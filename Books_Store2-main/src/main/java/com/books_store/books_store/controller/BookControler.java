@@ -15,36 +15,33 @@ import org.springframework.web.bind.annotation.RestController;
 import com.books_store.books_store.Dto.BookDTO;
 import com.books_store.books_store.Dto.MessageResponseDTO;
 import com.books_store.books_store.entity.Book;
+import com.books_store.books_store.exception.BookNotFoundException;
+import com.books_store.books_store.repository.BookRepository;
 import com.books_store.books_store.service.BookService;
 
 @RestController
 @RequestMapping("/api/v1/books")
 public class BookControler {
 
-    private BookService bookservice;
-
     @Autowired
-    public BookControler(BookService bookservice) {
-        this.bookservice = bookservice;
-    }
-
+    private BookService bookservice;
 
 
     @PostMapping
     public MessageResponseDTO create (@RequestBody @Valid BookDTO bookDTO){
-        return bookservice.create(bookDTO);   
+        return bookservice.create(bookDTO);
     }
-/*/
-    @GetMapping("/{id}")
-    public BookDTO findById(@PathVariable Integer id){
-        return bookservice.findById(id);
-    }
-*/
+
+
+
 
     @GetMapping("/{id}")
-	public Optional<Book> findById (@PathVariable Integer id) {
-		return bookservice.findById(id);
-	}
+    public BookDTO findById(@PathVariable Integer id) throws BookNotFoundException{
+        return bookservice.findById(id);
+    }
+
+
+
 
 
 

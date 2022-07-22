@@ -15,3 +15,7 @@ public interface BookMapper {
 
     BookDTO toDTO (Book book);
 }
+/*
+ * mapstruct : auxilia na transferencia de dto para entity
+ * os nomes usados nos metodos devem ser estes / toModel e toDTO
+ */
